@@ -6,6 +6,13 @@
  */
 
 module.exports = {
-	
+  mostrar: function (req, res) {
+    Alumno.find(function foundAlumno(err, alumnos) {
+      if (err) console.log(err);
+      return res.view('notas', {
+        alumnos: alumnos
+      });
+    });
+},
 };
 
