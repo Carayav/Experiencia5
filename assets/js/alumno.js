@@ -35,6 +35,7 @@ $(document).ready(function() {
       data: $('#formulario').serialize(),
       success: function(response) {
         console.log("Hola");
+        window.location.href = "/"
       }
     });
   });
@@ -44,5 +45,4 @@ $(document).ready(function() {
     $("#promedioEditar").val($(this).data('promedio'));
     $('#promedioModal').modal('show');
   });
-
 });
